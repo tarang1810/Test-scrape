@@ -26,7 +26,7 @@ class PesticideScraper:
         time.sleep(0.5)
 
         try:
-            today = datetime.utcnow().strftime("%d-%m-%Y %H:%M:%S")
+            today = datetime.utcnow().strftime("%d-%m-%Y %H-%M-%S")
             os.mkdir(self.path + '/' + today)
             os.mkdir(self.path + '/' + today + '/pesticides')
             os.mkdir(self.path + '/' + today + '/adjuvants')
@@ -62,7 +62,7 @@ class PesticideScraper:
         else:
             return True
 
-    def getPesticideLinks(self, target):
+    def getPesticideLinks(self, target, start_date):
 
         Links = []
         lastpage = 1
@@ -82,13 +82,12 @@ class PesticideScraper:
                         }
 
         else:
-
-            yesterday = (datetime.utcnow() - timedelta(days=1)).strftime('%d/%m/%Y')
             contains = 'getfullproduct'
+            cont_aut = 'getfile'
             url  	 = 'https://secure.pesticides.gov.uk/pestreg/PMList.asp'
             payload  = {
                         'origin': 'pmsearch',
-                        'modifieddate': yesterday,
+                        'modifieddate': start_date,
                         'resultsperpage': '100',
                         'submit_btn': 'Get Results'
                         }
@@ -107,6 +106,7 @@ class PesticideScraper:
             if len(beforenext) > 0:
                 lastpage = int(re.search(regex, beforenext[0]).group(1))
 
+        todays_json_output = {'pesticides': []}
         ## Loop through pages and gather links
         for i in range(1, lastpage + 1): # lastpage + 1  |  2
             time.sleep(0.2)
@@ -117,33 +117,46 @@ class PesticideScraper:
             if target == 'All':
                 Links += parsed.xpath("//td[@class='db']//a[contains(@href, '{0}')]/@href".format(contains))
             else:
+                # todays_json_output = {'pesticides': []}
+                if os.path.isfile('yesterdays_pesticides.json'):
+                    outfile = open('yesterdays_pesticides.json', 'r')
+                    yesterdays_json_output = json.load(outfile)
+                else:
+                    yesterdays_json_output = {}
                 trs = parsed.xpath("//tbody/tr")
                 for tr in trs:
                     link = tr.xpath("td[@class='db']//a[contains(@href, '{0}')]/@href".format(contains))
                     if not link:
                         continue
-                    link = link[0]
-                    notice_type = tr.xpath('td[last()]/text()')
-                    notice_type = notice_type[0].replace('\n', '').replace('\t', '').replace('\t',
-                                                                                             '').strip() if notice_type else "Monthly Revocation Notice"
-                    if notice_type == "":
-                        notice_type = "Monthly Revocation Notice"
+                    auth = tr.xpath("td[@class='db']//a[contains(@href, '{0}')]/text()".format(cont_aut))[0]
+                    todays_json_output['pesticides'].append(auth)
+                    print("auth : ", auth)
+                    print("len of auth : ", len(auth))
+                    if auth not in yesterdays_json_output.get('pesticides', []):
+                        link = link[0]
+                        notice_type = tr.xpath('td[last()]/text()')
+                        notice_type = notice_type[0].replace('\n', '').replace('\t', '').replace('\t',
+                                                                                                '').strip() if notice_type else "Monthly Revocation Notice"
+                        if notice_type == "":
+                            notice_type = "Monthly Revocation Notice"
 
-                    file_link = None
-                    if notice_type not in ['Authorisation', 'Correction']:
-                        approval_date = tr.xpath("td[@class='db']//a[contains(@href, 'getfile.asp')]/text()")
+                        file_link = None
+                        if notice_type not in ['Authorisation', 'Correction']:
+                            approval_date = tr.xpath("td[@class='db']//a[contains(@href, 'getfile.asp')]/text()")
 
-                        approval_date = approval_date[0].\
-                            replace('\n', '').replace('\t', '').replace('\t', '').strip() if approval_date else ''
+                            approval_date = approval_date[0].\
+                                replace('\n', '').replace('\t', '').replace('\t', '').strip() if approval_date else ''
 
-                        file_link = tr.xpath("td[@class='db']//a[contains(@href, 'getfile.asp')]/@href")
-                        file_link = f'{file_link[0]}&approvalno={approval_date}' if file_link else None
+                            file_link = tr.xpath("td[@class='db']//a[contains(@href, 'getfile.asp')]/@href")
+                            file_link = f'{file_link[0]}&approvalno={approval_date}' if file_link else None
 
-                    Links.append({
-                        'link': link,
-                        'notice_type': notice_type,
-                        'file_link': file_link
-                    })
+                        Links.append({
+                            'link': link,
+                            'notice_type': notice_type,
+                            'file_link': file_link
+                        })
+                outfile = open('yesterdays_pesticides.json', 'w')
+                json.dump(todays_json_output, outfile)
         return Links
 
     def get_crops(self, text):
@@ -440,7 +453,7 @@ class PesticideScraper:
 
         return big_dict
 
-    def getExtensions(self, target):
+    def getExtensions(self, target, start_date):
 
         Extensions = {}
         lastpage = 1
@@ -457,12 +470,11 @@ class PesticideScraper:
                         'resultsperpage': '100'
                         }
         else:
-            yesterday = (datetime.utcnow() - timedelta(days=1)).strftime('%d/%m/%Y')
             url = "https://secure.pesticides.gov.uk/offlabels/OffLabelList.asp"
             payload = {
                 'origin': 'search',
                 'active': '%',
-                'modifieddate': yesterday,
+                'modifieddate': start_date,
                 'submit_btn': 'Get Results',
                 'resultsperpage': '100'
             }
@@ -482,103 +494,213 @@ class PesticideScraper:
 
         os.chdir(self.path + '/extensions/')
 
+        output_dir = self.path
+        todays_json_output = {'extensions': []}
         ## Loop through pages and gather links
         for i in range(2, lastpage + 2):  # lastpage + 1  |  2
 
             print("Page", i-1, "of", lastpage)
-            rows = parsed.xpath("//table[@class='dbresult']/tbody/tr")
-            for row in rows:
-                extension = {'flags': []}
-                auth_number = 'Unnamed'
-                col2 = row.xpath('td[3]')
-                for c in col2:
-                    auth_number = c.xpath('a/strong')[0].text
-                    extension['auth_number'] = auth_number
-                    extension['doc_link'] = 'https://secure.pesticides.gov.uk/offlabels/' + c.xpath('a')[0].get('href')
-                    extension = self.check_date(c.xpath('br')[0].tail.strip(), extension, 'issue')
-                    extension = self.check_date(c.xpath('br')[1].tail.strip(), extension, 'expiry')
+            if target == 'All':
+                rows = parsed.xpath("//table[@class='dbresult']/tbody/tr")
+                for row in rows:
+                    extension = {'flags': []}
+                    auth_number = 'Unnamed'
+                    col2 = row.xpath('td[3]')
+                    for c in col2:
+                        auth_number = c.xpath('a/strong')[0].text
+                        extension['auth_number'] = auth_number
+                        extension['doc_link'] = 'https://secure.pesticides.gov.uk/offlabels/' + c.xpath('a')[0].get('href')
+                        extension = self.check_date(c.xpath('br')[0].tail.strip(), extension, 'issue')
+                        extension = self.check_date(c.xpath('br')[1].tail.strip(), extension, 'expiry')
 
-                col1 = row.xpath('td[1]')
-                for c in col1:
-                    extension['mapp'] = c.xpath('br')[0].tail.strip()
+                    col1 = row.xpath('td[1]')
+                    for c in col1:  
+                        pesticide = c.xpath('strong')[0].text
+                        extension['pesticide'] = pesticide
+                        extension['mapp'] = c.xpath('br')[0].tail.strip()
+                        print(c.xpath('br')[0].tail.strip())
+                        print(c.xpath('br')[0])
+                        
+                    col3 = row.xpath('td[2]/text()')
+                    if col3:
+                        extension['Extent of Authorisation'] = col3[0].strip()
 
-                col3 = row.xpath('td[2]/text()')
-                if col3:
-                    extension['Extent of Authorisation'] = col3[0].strip()
+                    col7 = row.xpath('td[7]')
+                    if col7:
+                        web_pests = col7[0].text
+                        for child in col7[0].getchildren():
+                            web_pests += f'{child.text} {child.tail}'
+                        web_pests = web_pests.strip()
+                        if web_pests:
+                            extension['Web Pests'] = web_pests
+                            extension['Web Pests'] = extension['Web Pests'].split(', ')
 
-                col7 = row.xpath('td[7]')
-                if col7:
-                    web_pests = col7[0].text
-                    for child in col7[0].getchildren():
-                        web_pests += f'{child.text} {child.tail}'
-                    web_pests = web_pests.strip()
-                    if web_pests:
-                        extension['Web Pests'] = web_pests
-                        extension['Web Pests'] = extension['Web Pests'].split(', ')
+                    # Download all documents in /pesticides/recordname
+                    # with recordname = MAPP (Reg.)
 
-                # Download all documents in /pesticides/recordname
-                # with recordname = MAPP (Reg.)
+                    dlink = extension['doc_link']
+                    r = requests.get(dlink, stream=True)
 
-                dlink = extension['doc_link']
-                r = requests.get(dlink, stream=True)
+                    d = r.headers['content-disposition']
+                    file_extension = re.findall("filename=.+(\.\w+)", d)[0]
 
-                d = r.headers['content-disposition']
-                file_extension = re.findall("filename=.+(\.\w+)", d)[0]
+                    if self.checkStatus(r, dlink):
 
-                if self.checkStatus(r, dlink):
+                        name = auth_number + file_extension
+                        download = open(name, "wb")
 
-                    name = auth_number + file_extension
-                    download = open(name, "wb")
+                        for chunk in r.iter_content(chunk_size=256):
+                            if chunk:
+                                download.write(chunk)
 
-                    for chunk in r.iter_content(chunk_size=256):
-                        if chunk:
-                            download.write(chunk)
+                        download.close()
 
-                    download.close()
+                        time.sleep(0.2)
 
-                    time.sleep(0.2)
-
-                    try:
-                        file = DocumentFile(name, True)
-                        doc = file.read_docx()
-                    except:
                         try:
                             file = DocumentFile(name, True)
                             doc = file.read_docx()
                         except:
-                            print("Failed converting file to docx")
-                    else:
-                        file.get_main_info(doc)
-                        protections = file.get_protections(doc)
-                        extension['protections'] = {"protections":protections,
-                                         "date": file.date_of_issue if hasattr(file, 'date_of_issue') else None,
-                                         "file": file.path}
-                        crops, aquatic = file.get_crops(doc)
-                        if crops:
-                            extension['crops'] = crops
+                            try:
+                                file = DocumentFile(name, True)
+                                doc = file.read_docx()
+                            except:
+                                print("Failed converting file to docx")
+                        else:
+                            file.get_main_info(doc)
+                            protections = file.get_protections(doc)
+                            extension['protections'] = {"protections":protections,
+                                            "date": file.date_of_issue if hasattr(file, 'date_of_issue') else None,
+                                            "file": file.path}
+                            crops, aquatic = file.get_crops(doc)
+                            if crops:
+                                extension['crops'] = crops
 
-                        if aquatic:
-                            extension['aquatic'] = aquatic
+                            if aquatic:
+                                extension['aquatic'] = aquatic
 
-                        if file.flags:
-                            extension['flags'] += file.flags
-
-
-                set_flags = ['mapp', 'crops']
-                for f in set_flags:
-                    if not extension.get(f):
-                        extension['flags'].append('Extension does not have {}'.format(f))
+                            if file.flags:
+                                extension['flags'] += file.flags
 
 
-                if not extension['flags']:
-                    del extension['flags']
+                    set_flags = ['mapp', 'crops']
+                    for f in set_flags:
+                        if not extension.get(f):
+                            extension['flags'].append('Extension does not have {}'.format(f))
 
-                Extensions[auth_number] = extension
+
+                    if not extension['flags']:
+                        del extension['flags']
+
+                    Extensions[auth_number] = extension
+
+            else:
+                yesterday_extension_file_path = os.path.join(os.path.dirname(os.path.dirname(output_dir)), 'yesterdays_extensions.json')
+                if os.path.isfile(yesterday_extension_file_path):
+                    with open(yesterday_extension_file_path, 'r') as outfile:
+                        yesterdays_json_output = json.load(outfile)
+                else:
+                    yesterdays_json_output = {}
+                rows = parsed.xpath("//table[@class='dbresult']/tbody/tr")
+                for row in rows:
+                    col2 = row.xpath('td[3]')
+                    auth_number = 'Unnamed'
+                    extension = {'flags': []}
+                    for c in col2:
+                        auth_number = c.xpath('a/strong')[0].text
+                        todays_json_output['extensions'].append(auth_number)
+                        if auth_number not in yesterdays_json_output.get('extensions', []):
+                            extension['auth_number'] = auth_number
+                            print("auth_number :", auth_number)
+                            extension['doc_link'] = 'https://secure.pesticides.gov.uk/offlabels/' + c.xpath('a')[0].get('href')
+                            extension = self.check_date(c.xpath('br')[0].tail.strip(), extension, 'issue')
+                            extension = self.check_date(c.xpath('br')[1].tail.strip(), extension, 'expiry')
+
+                    if auth_number not in yesterdays_json_output.get('extensions', []):
+                        col1 = row.xpath('td[1]')
+                        for c in col1:  
+                            pesticide = c.xpath('strong')[0].text
+                            extension['pesticide'] = pesticide
+                            extension['mapp'] = c.xpath('br')[0].tail.strip()
+                            print(c.xpath('br')[0].tail.strip())
+                            print(c.xpath('br')[0])
+                            
+                        col3 = row.xpath('td[2]/text()')
+                        if col3:
+                            extension['Extent of Authorisation'] = col3[0].strip()
+
+                        col7 = row.xpath('td[7]')
+                        if col7:
+                            web_pests = col7[0].text
+                            for child in col7[0].getchildren():
+                                web_pests += f'{child.text} {child.tail}'
+                            web_pests = web_pests.strip()
+                            if web_pests:
+                                extension['Web Pests'] = web_pests
+                                extension['Web Pests'] = extension['Web Pests'].split(', ')
+
+                        # Download all documents in /pesticides/recordname
+                        # with recordname = MAPP (Reg.)
+
+                        dlink = extension['doc_link']
+                        r = requests.get(dlink, stream=True)
+
+                        d = r.headers['content-disposition']
+                        file_extension = re.findall("filename=.+(\.\w+)", d)[0]
+
+                        if self.checkStatus(r, dlink):
+
+                            name = auth_number + file_extension
+                            download = open(name, "wb")
+
+                            for chunk in r.iter_content(chunk_size=256):
+                                if chunk:
+                                    download.write(chunk)
+
+                            download.close()
+
+                            time.sleep(0.2)
+
+                            try:
+                                file = DocumentFile(name, True)
+                                doc = file.read_docx()
+                            except:
+                                try:
+                                    file = DocumentFile(name, True)
+                                    doc = file.read_docx()
+                                except:
+                                    print("Failed converting file to docx")
+                            else:
+                                file.get_main_info(doc)
+                                protections = file.get_protections(doc)
+                                extension['protections'] = {"protections":protections,
+                                                "date": file.date_of_issue if hasattr(file, 'date_of_issue') else None,
+                                                "file": file.path}
+                                crops, aquatic = file.get_crops(doc)
+                                if crops:
+                                    extension['crops'] = crops
+
+                                if aquatic:
+                                    extension['aquatic'] = aquatic
+
+                                if file.flags:
+                                    extension['flags'] += file.flags
+
+
+                        set_flags = ['mapp', 'crops']
+                        for f in set_flags:
+                            if not extension.get(f):
+                                extension['flags'].append('Extension does not have {}'.format(f))
+
+                        if not extension['flags']:
+                            del extension['flags']
+
+                        Extensions[auth_number] = extension
 
             with open("../extensions.json", "w") as file:
                 file.write(json.dumps(Extensions))
 
-            if i >= lastpage:
+            if i > lastpage:
                 break
 
             time.sleep(0.2)
@@ -588,10 +710,13 @@ class PesticideScraper:
 
         with open("../extensions.json", "w") as file:
             file.write(json.dumps(Extensions, indent=2))
+        if target != 'All':
+            with open(yesterday_extension_file_path, "w") as outfile:
+                json.dump(todays_json_output, outfile)
 
         return Extensions
 
-    def getAdjuvantLinks(self, target):
+    def getAdjuvantLinks(self, target, start_date):
 
         out_dir = '/'.join(self.path.split('/')[:-2])
         os.chdir(out_dir)
@@ -649,6 +774,8 @@ class PesticideScraper:
             eventvalid = str(parsed.xpath("//input[@name='__EVENTVALIDATION']/@value")[0])
             links = parsed.xpath("//a[contains(@href, 'ListEntry')]/@href")
 
+            authorisations = parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_AdjuvantGV']//tr/td[3]")[:-1]
+
             i = 1
             while ResponseStatus == 200:
                 time.sleep(1)
@@ -691,28 +818,88 @@ class PesticideScraper:
                 eventvalid = eventvalid.group(1)
 
                 links = links + parsed.xpath("//a[contains(@href, 'ListEntry')]/@href")
-
-            return links
+                authorisations = authorisations + parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_AdjuvantGV']//tr/td[3]")[:-1]   
+                
+            return links, authorisations
 
         else:
-            time.sleep(1.18)
-            url = 'https://secure.pesticides.gov.uk/adjuvants/updates.aspx'
+            start_date = start_date.strftime("%d/%m/%Y")
+            url 	 = "https://secure.pesticides.gov.uk/adjuvants/updates.aspx"
             r = self.s.get(url)
             self.checkStatus(r, url)
+
             parsed = html.fromstring(r.text)
-            rows = parsed.xpath("//table[@id='ContentPlaceHolder1_tblLenums']/tr")
+            viewstate = str(parsed.xpath("//input[@name='__VIEWSTATE']/@value")[0])
+            stategen  = str(parsed.xpath("//input[@name='__VIEWSTATEGENERATOR']/@value")[0])
+            eventvalid = str(parsed.xpath("//input[@name='__EVENTVALIDATION']/@value")[0])
+            time.sleep(1.18)
+            url  	 = 'https://secure.pesticides.gov.uk/adjuvants/updates.aspx'
+            payload  = {
+                        'ctl00$ContentPlaceHolder1$ToolkitScriptManager2': 'ctl00$ContentPlaceHolder1$pnlOuter|ctl00$ContentPlaceHolder1$btnChange',
+                        '__VIEWSTATE' : viewstate,     
+                        '__VIEWSTATEGENERATOR': stategen,
+                        '__EVENTVALIDATION' : eventvalid,
+                        '__ASYNCPOST' : True,
+                        'ctl00$ContentPlaceHolder1$btnChange': 'Change Dates'
+                        }
+            r = self.s.post(url, data=payload, headers={
+                                                        'Origin' : 'https://secure.pesticides.gov.uk',
+                                                        'Sec-Fetch-Mode' : 'cors',
+                                                        'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+                                                        'X-MicrosoftAjax' : 'Delta=true',
+                                                        'X-Requested-With' : 'XMLHttpRequest'})
+            self.checkStatus(r, url)
+            parsed = html.fromstring(r.text)
+           
+
+            viewstate_part = parsed.text_content().split("__VIEWSTATE|")[-1].split("==")[0] + "=="
+            viewstate = viewstate_part.split("|")[0]
+
+            viewstategen_part = parsed.text_content().split("__VIEWSTATEGENERATOR|")[-1].split("|200")[0]
+            stategen = viewstategen_part.split("|")[0]
+
+            eventvalidation_part = parsed.text_content().split("__EVENTVALIDATION|")[-1].split("=|0|")[0] + "="
+            eventvalid = eventvalidation_part.split("|")[0]
+            
+            time.sleep(1.18)
+            url  	 = 'https://secure.pesticides.gov.uk/adjuvants/updates.aspx'
+            payload  = {
+                        'ctl00$ContentPlaceHolder1$ToolkitScriptManager2': 'ctl00$ContentPlaceHolder1$pnlOuter|ctl00$ContentPlaceHolder1$btnChange',
+                        'ctl00_ContentPlaceHolder1_ToolkitScriptManager2_HiddenField': '',
+                        'ctl00$ContentPlaceHolder1$ddlType' : 'after',
+                        'ctl00$ContentPlaceHolder1$tbDate1' : start_date,
+                        '__LASTFOCUS': '',
+                        '__EVENTTARGET': '',
+                        '__EVENTARGUMENT': '',
+                        '__VIEWSTATE' : viewstate,     
+                        '__VIEWSTATEGENERATOR': stategen,
+                        '__EVENTVALIDATION' : eventvalid,
+                        '__ASYNCPOST' : True,
+                        'ctl00$ContentPlaceHolder1$btnGet': 'Get Results'
+                        }
+            r = self.s.post(url, data=payload, headers={
+                                                        'Origin' : 'https://secure.pesticides.gov.uk',
+                                                        'Sec-Fetch-Mode' : 'cors',
+                                                        'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+                                                        'X-MicrosoftAjax' : 'Delta=true',
+                                                        'X-Requested-With' : 'XMLHttpRequest'})
+
+            self.checkStatus(r, url)
+            parsed = html.fromstring(r.text)
+
+            rows = parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_tblLenums']/tr")
 
             additions = []
+            authorisations = []
             removals = {}
             todays_json_output = {'additions': [], 'removals': []}
-
             if os.path.isfile('yesterdays_adjuvants.json'):
                 outfile = open('yesterdays_adjuvants.json', 'r')
                 yesterdays_json_output = json.load(outfile)
             else:
                 yesterdays_json_output = {}
 
-
+            first_row = True
             for row in rows:
                 h1 = row.xpath('td/h1')
                 h2 = row.xpath('td/h2')
@@ -729,8 +916,12 @@ class PesticideScraper:
                         rem = True
                 elif len(adj) > 0:
                     if add or rem:
+
                         blank = row.xpath('(td[2]/text()) | (td[2]/a/text())')
                         if not blank:
+                            continue
+                        if first_row:
+                            first_row = False
                             continue
                     else:
                         continue
@@ -738,10 +929,13 @@ class PesticideScraper:
                     if add:
 
                         id = str(row.xpath('td[@class="listentry"]/a/text()|td[@class="listentry"]/text()')[0])
-                        todays_json_output['additions'].append(id)
 
-                        if id not in yesterdays_json_output.get('additions', [id]):
+                        todays_json_output['additions'].append(id)
+                        if id not in yesterdays_json_output.get('additions', []):
                             link = row.xpath('td[@class="listentry"]/a/@href')
+                            auth = row.xpath('td[4]/text()')[0]
+                            authorisations.append(auth)
+
                             if link:
                                 additions.append(link[0])
 
@@ -750,16 +944,17 @@ class PesticideScraper:
                         id = str(row.xpath('td[1]/text()')[0])
                         todays_json_output['removals'].append(id)
 
-                        if id not in yesterdays_json_output.get('removals', [id]):
+                        if id not in yesterdays_json_output.get('removals', []):
                             name = row.xpath('td[2]/text()')[0]
+                            auth = row.xpath('td[4]/text()')[0]
                             number = row.xpath('td[3]/text()')[0]
                             rem_date = row.xpath('td[6]/text()')[0]
-                            removals[number] = {"name": name, "number": number, "removal_date": rem_date}
-
+                            removals[number] = {"name": name, "number": number, "removal_date": rem_date, "Extent of Authorisation" : auth}
+                            
             outfile = open('yesterdays_adjuvants.json', 'w')
             json.dump(todays_json_output, outfile)
 
-            return additions, removals
+            return additions, removals, authorisations
 
     def getAdjuvantInfo(self, link):
 
@@ -775,63 +970,85 @@ class PesticideScraper:
         regex = re.compile('(\d+\.?\d*)\s(.*/..)(.*$)')
 
         url = 'https://secure.pesticides.gov.uk/adjuvants/' + str(link)
+        print(url)
         r = self.s.get(url)
         self.checkStatus(r, url)
         parsed = html.fromstring(r.text)
 
         dictionary.update({'Url': url})
         dictionary.update({'flags': []})
-        dictionary.update({'Name': parsed.xpath("//span[@id='ContentPlaceHolder1_lblAdjuvantName']//text()")[0]})
-        dictionary.update({'Number': parsed.xpath("//span[@id='ContentPlaceHolder1_lblAdjuvantNumber']//text()")[0]})
-        dictionary.update({'Formulation':
-                               parsed.xpath("//span[@id='ContentPlaceHolder1_lblFormulation']/text()")[0].split(
-                                   'containing')[0]})
-        dictionary.update({'Applicant': str(parsed.xpath("//span[@id='ContentPlaceHolder1_lblApplicant']//text()")[0]).split(',')[0]})
-        dictionary = self.check_date(parsed.xpath("//span[@id='ContentPlaceHolder1_lblIncDate']//text()")[0], dictionary, 'Date of Inclusion')
-        dictionary.update({'Field of Use': parsed.xpath("//span[@id='ContentPlaceHolder1_lblFOU']//text()")[0]})
+        adjuvant_name = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblAdjuvantName']//text()")
+        if adjuvant_name and len(adjuvant_name) > 0:
+            dictionary.update({'Name': adjuvant_name[0]}) 
+        adjuvant_number = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblAdjuvantNumber']//text()")
+        if adjuvant_number and len(adjuvant_number) > 0:
+            dictionary.update({'Number': adjuvant_number[0]})
+        else:
+            dictionary.update({'Number': None})
+        adjuvant_formulation_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblFormulation']/text()")
+        if adjuvant_formulation_elements:
+            adjuvant_formulation = adjuvant_formulation_elements[0].split('containing')[0]
+            dictionary.update({'Formulation': adjuvant_formulation})
+   
+        adjuvant_applicant_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblApplicant']//text()")
+        if adjuvant_applicant_elements:
+            adjuvant_applicant = str(adjuvant_applicant_elements[0]).split(',')[0]
+            dictionary.update({'Applicant': adjuvant_applicant})
 
-        substances = parsed.xpath("//span[@id='ContentPlaceHolder1_lblFormulation']/text()")[0].split('containing')[1].split(' (detailed')[0].strip()
+        date_of_inclusion_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblIncDate']//text()")
+        if date_of_inclusion_elements:
+            date_of_inclusion = date_of_inclusion_elements[0]
+            dictionary = self.check_date(date_of_inclusion, dictionary, 'Date of Inclusion')
+        
+        adjuvant_field_of_use_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblFOU']//text()")
+        if adjuvant_field_of_use_elements:
+            adjuvant_field_of_use = adjuvant_field_of_use_elements[0]
+            dictionary.update({'Field of Use': adjuvant_field_of_use})
 
-        actives = []
-        active_substances = []
-        if len(substances) > 0:
-            actives_first = substances.split(' and ')
-            for a in actives_first:
-                actives += a.split(', ')
+        substances_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblFormulation']/text()")
+        if substances_elements:
+            substances = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblFormulation']/text()")[0].split('containing')[1].split(' (detailed')[0].strip()
 
-            for a in actives:
-                pos1 = a.find('/')
-                if a[pos1 + 1] == " ":
-                    pos2 = a.find(' ', pos1 + 2)
-                else:
-                    pos2 = a.find(' ', pos1)
+            actives = []
+            active_substances = []
+            if len(substances) > 0:
+                actives_first = substances.split(' and ')
+                for a in actives_first:
+                    actives += a.split(', ')
 
-                if a[pos1 - 1] == " ":
-                    pos3 = a[:pos1 - 2].rfind(" ")
-                else:
-                    pos3 = a[:pos1 - 1].rfind(" ")
+                for a in actives:
+                    pos1 = a.find('/')
+                    if a[pos1 + 1] == " ":
+                        pos2 = a.find(' ', pos1 + 2)
+                    else:
+                        pos2 = a.find(' ', pos1)
 
-                if a[pos3 - 1] == "%":
-                    pos3 -= 1
+                    if a[pos1 - 1] == " ":
+                        pos3 = a[:pos1 - 2].rfind(" ")
+                    else:
+                        pos3 = a[:pos1 - 1].rfind(" ")
 
-                substance = a[pos2:].strip()
-                value = a[:pos3].strip()
-                metric = a[pos3:pos2].strip()
+                    if a[pos3 - 1] == "%":
+                        pos3 -= 1
 
-                try:
-                    int(value.replace('.', ''))
-                except:
-                    if 'x10' not in value:
-                        if len(active_substances) > 0:
-                            active_substances[-1]['substance'] += ', ' + a.strip()
-                            continue
+                    substance = a[pos2:].strip()
+                    value = a[:pos3].strip()
+                    metric = a[pos3:pos2].strip()
 
-                active_substances.append({'value': value, 'metric': metric, 'substance': substance})
+                    try:
+                        int(value.replace('.', ''))
+                    except:
+                        if 'x10' not in value:
+                            if len(active_substances) > 0:
+                                active_substances[-1]['substance'] += ', ' + a.strip()
+                                continue
 
-        dictionary['Formulation Substances'] = active_substances
+                    active_substances.append({'value': value, 'metric': metric, 'substance': substance})
+
+                    dictionary['Formulation Substances'] = active_substances
 
         dictionary['CropInfo'] = []
-        CropTable = CropTable + parsed.xpath("//table[@id='ContentPlaceHolder1_tblUses']//tbody//tr")
+        CropTable = CropTable + parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_tblUses']//tbody//tr")
         for i in range(len(CropTable)):
             more = CropTable[i][0].text.split(',')
             muchmore = more
@@ -858,13 +1075,13 @@ class PesticideScraper:
                 orddict['Latest time of application'] = CropTable[i][4].text.strip()
                 dictionary['CropInfo'].append(orddict)
 
-        InAddition = parsed.xpath("//span[@id='ContentPlaceHolder1_lblSecUses']/text()")
+        InAddition = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblSecUses']/text()")
         if len(InAddition) > 0:
             MaxConcentration = InAddition[0]
             MaxConcentration = MaxConcentration[MaxConcentration.find('concentration of') + 16:].strip()
             MaxConcentration = MaxConcentration[: MaxConcentration.find(' ')]
 
-        CropTable2 = parsed.xpath("//table[@id='ContentPlaceHolder1_tblSecUses']//tbody//tr")
+        CropTable2 = parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_tblSecUses']//tbody//tr")
 
         for i in range(len(CropTable2)):
             more = CropTable2[i][0].text.split(',')
@@ -882,20 +1099,21 @@ class PesticideScraper:
                 orddict['Latest time of application'] = CropTable2[i][1].text.strip()
                 dictionary['CropInfo'].append(orddict)
 
-        OPTable = parsed.xpath("//table[@id='ContentPlaceHolder1_tblOPPhrase']/tr")
+        OPTable = parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_tblOPPhrase']/tr")
         dictionary['Operator Instructions'] = []
         for i in range(len(OPTable)):
             dictionary['Operator Instructions'].append(OPTable[i][1].text)
 
 
-        OSTable = parsed.xpath("//table[@id='ContentPlaceHolder1_tblOSRPhrase']/tr")
+        OSTable = parsed.xpath("//table[@id='ctl00_ContentPlaceHolder1_tblOSRPhrase']/tr")
         dictionary['Specific Restrictions'] = []
         for i in range(len(OSTable)):
             dictionary['Specific Restrictions'].append(OSTable[i][1].text)
 
-
-        dictionary.update({'List Entry - Document': parsed.xpath("//span[@id='ContentPlaceHolder1_lblListEntryNumber']//text()")[0].split('. ')[1]})
-
+        list_entry_document_elements = parsed.xpath("//span[@id='ctl00_ContentPlaceHolder1_lblListEntryNumber']//text()")
+        if list_entry_document_elements:
+            list_entry_document = list_entry_document_elements[0].split('. ')[1]
+            dictionary.update({'List Entry - Document': list_entry_document})
 
         os.chdir(self.path)
 
@@ -980,9 +1198,13 @@ class PesticideScraper:
 
         example_text = '''usage:
             python Pestice_Scraper.py -p 
-            python Pestice_Scraper.py -p -u 
+            python Pestice_Scraper.py -p -u -sd YYYY-MM-DD
             python Pestice_Scraper.py -a 
         '''
+
+        # -sd "%Y-%m-%d" -ed "%Y-%m-%d"
+        # -sd "%Y-%m-%d" -ed "%Y-%m-%d"
+        # -sd "%Y-%m-%d" -ed "%Y-%m-%d"
 
         ap = argparse.ArgumentParser(description='Pesticide Scraper UK', epilog=example_text, formatter_class=argparse.RawDescriptionHelpFormatter)
         ap.add_argument("-p", action='store_true', dest='pesticide', help="scrape pesticide catalog")
@@ -991,6 +1213,11 @@ class PesticideScraper:
         ap.add_argument("-u", action='store_true', dest='update', help="scrape changes for target option -p or -a")
         ap.add_argument("-s", action='store_true', dest='ftp', help="Send the information to the FTP")
 
+        # Add a new argument for date input
+        ap.add_argument("-sd", "--start_date", type=lambda d: datetime.strptime(d, '%Y-%m-%d').date(), dest='start_date', default=None, help="Specify a date (YYYY-MM-DD)")
+        # ap.add_argument("-ed", "--end_date", type=lambda d: datetime.strptime(d, '%Y-%m-%d').date(), dest='end_date', default=None, help="Specify a date (YYYY-MM-DD)")
+        
+        
         if len(sys.argv)==1:
             ap.print_help(sys.stderr)
             sys.exit(1)
@@ -998,10 +1225,14 @@ class PesticideScraper:
         args = ap.parse_args()
         scraper = PesticideScraper()
 
+        start_date = args.start_date
+        # end_date = args.end_date
+        print(f"Start Date: {start_date}")
+        # print(f"End Date: {end_date}")
+
         if args.pesticide:
             try:
                 ini_p = 0
-
                 if ini_p == 0:
                     pesticides = {}
                     substances = {}
@@ -1013,12 +1244,11 @@ class PesticideScraper:
                     pesticides = json.load(open(scraper.path + "/pesticide.json", "r"))
                     substances = json.load(open(scraper.path + "/active_substances.json", "r"))
 
-                # Perform daily update
                 if args.update:
                     print("STARTING Pesticides AND Active Substances UPDATE...")
-
                     # Get new records link list
-                    links = scraper.getPesticideLinks('New')
+                    start_date = datetime.strptime(str(start_date), "%Y-%m-%d").date()
+                    links = scraper.getPesticideLinks('New', start_date)
                     print(len(links), "Pesticide records to be extracted...")
 
                     # Get information from Details Page and Documents
@@ -1064,9 +1294,9 @@ class PesticideScraper:
                 # Perform entire extraction
                 else:
                     print("STARTING Pesticides AND Active Substances ENTIRE EXTRACTION...")
-
+                    start_date = None
                     # Get links list
-                    links = scraper.getPesticideLinks('All')
+                    links = scraper.getPesticideLinks('All', start_date)
                     print(len(links), "Pesticide records to be extracted...")
 
                     # Get information from Details Page and Documents
@@ -1122,7 +1352,8 @@ class PesticideScraper:
                 # Perform daily update
                 if args.update:
                     print("STARTING extensions of authorization UPDATE...")
-                    extensions = scraper.getExtensions('New')
+                    start_date = datetime.strptime(str(start_date), "%Y-%m-%d").date()
+                    extensions = scraper.getExtensions('New', start_date)
                     print(len(extensions), "Extensions of authorization extracted")
 
                     json.dump(extensions, open(scraper.path + "/extensions.json", "w"), indent=2)
@@ -1130,7 +1361,8 @@ class PesticideScraper:
                 # Perform entire extraction
                 else:
                     print("STARTING extensions of authorization ENTIRE EXTRACTION...")
-                    extensions = scraper.getExtensions('All')
+                    start_date = None
+                    extensions = scraper.getExtensions('All', start_date)
                     print(len(extensions), "Extensions of authorization extracted")
 
                     json.dump(extensions, open(scraper.path + "/extensions.json", "w"), indent=2)
@@ -1145,9 +1377,10 @@ class PesticideScraper:
                 # Perform daily update
                 if args.update:
                     print("STARTING Adjuvants UPDATE...")
+                    start_date = datetime.strptime(str(start_date), "%Y-%m-%d").date()
 
                     # Get new records link list
-                    additions, removals = scraper.getAdjuvantLinks('New')
+                    additions, removals, authorisations = scraper.getAdjuvantLinks('New', start_date)
                     adjuvants = {}
 
                     # Write removal records
@@ -1161,6 +1394,9 @@ class PesticideScraper:
                     for cont, link in enumerate(additions):
                         print("\t" + str(cont + 1) + "/" + str(len(additions)))
                         adjuvant = scraper.getAdjuvantInfo(link)
+
+                        extent_of_authorisation = authorisations[cont]
+                        adjuvant.update({"Extent of Authorisation": extent_of_authorisation})
                         adjuvants[adjuvant['Number']] = adjuvant
 
                         json.dump(adjuvants, open(scraper.path + "/adjuvants.json", "w"), indent=2)
@@ -1169,16 +1405,23 @@ class PesticideScraper:
                 # Perform entire extraction
                 else:
                     print("STARTING Adjuvants ENTIRE EXTRACTION...")
+                    start_date = None
 
                     # Get new records link list
-                    links = scraper.getAdjuvantLinks('All')
+                    links, authorisations = scraper.getAdjuvantLinks('All', start_date)
                     print(len(links), "Adjuvant records to be extracted...")
+                    print(len(authorisations), "Total authorisation")
                     adjuvants = {}
-
                     # Get information from Details Page
                     for cont, link in enumerate(links):
                         print("\t" + str(cont) + "/" + str(len(links)))
                         adjuvant = scraper.getAdjuvantInfo(link)
+
+                        extent_of_authorisation = authorisations[cont].text
+                        if extent_of_authorisation is None:
+                            extent_of_authorisation = authorisations[cont].xpath('font/text()')[0]
+                            
+                        adjuvant.update({"Extent of Authorisation": extent_of_authorisation})
                         adjuvants[adjuvant['Number']] = adjuvant
 
                         json.dump(adjuvants, open(scraper.path + "/adjuvants.json", "w"), indent=2)
@@ -1198,4 +1441,3 @@ class PesticideScraper:
 
 if __name__ == '__main__':
     PesticideScraper.main()
-
