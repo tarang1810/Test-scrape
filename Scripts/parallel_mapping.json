@@ -1,0 +1,2954 @@
+{
+  "mapp": {
+    "name": "parent_name",
+    "mapp": "parent_mapp"
+  },
+  "7952": {
+    "name": "BASF 3C Chlormequat 750 ",
+    "mapp": "6878"
+  },
+  "8060": {
+    "name": "Shirlan  ",
+    "mapp": "7091"
+  },
+  "8670": {
+    "name": "Shirlan  ",
+    "mapp": "7091"
+  },
+  "8774": {
+    "name": "Monceren DS ",
+    "mapp": "4160"
+  },
+  "8813": {
+    "name": "Meteor",
+    "mapp": "6505"
+  },
+  "8941": {
+    "name": "Debut ",
+    "mapp": "7804"
+  },
+  "8965": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "8973": {
+    "name": "Tern  ",
+    "mapp": "8660"
+  },
+  "9021": {
+    "name": "Eagle ",
+    "mapp": "7318"
+  },
+  "9281": {
+    "name": "Landmark ",
+    "mapp": "8889"
+  },
+  "9345": {
+    "name": "Unix  ",
+    "mapp": "8764"
+  },
+  "9373": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "9398": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "9407": {
+    "name": "Opus  ",
+    "mapp": "8319"
+  },
+  "9440": {
+    "name": "Amistar  ",
+    "mapp": "8517"
+  },
+  "9442": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "9445": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "9482": {
+    "name": "Landmark ",
+    "mapp": "8889"
+  },
+  "9486": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "9487": {
+    "name": "Debut ",
+    "mapp": "7804"
+  },
+  "9515": {
+    "name": "Amistar  ",
+    "mapp": "8517"
+  },
+  "9516": {
+    "name": "Bumper P ",
+    "mapp": "8548"
+  },
+  "9517": {
+    "name": "Opus  ",
+    "mapp": "8319"
+  },
+  "9553": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "9571": {
+    "name": "Terpal C ",
+    "mapp": "7062"
+  },
+  "9580": {
+    "name": "Alto Elite  ",
+    "mapp": "8467"
+  },
+  "9634": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "9636": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "9654": {
+    "name": "Amistar  ",
+    "mapp": "8517"
+  },
+  "9668": {
+    "name": "Unix  ",
+    "mapp": "8764"
+  },
+  "9698": {
+    "name": "Landmark ",
+    "mapp": "8889"
+  },
+  "9821": {
+    "name": "Opus  ",
+    "mapp": "8319"
+  },
+  "9908": {
+    "name": "Landmark ",
+    "mapp": "8889"
+  },
+  "10050": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "10369": {
+    "name": "Monceren DS ",
+    "mapp": "4160"
+  },
+  "10445": {
+    "name": "Monceren DS ",
+    "mapp": "4160"
+  },
+  "10472": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "10473": {
+    "name": "Caramba  ",
+    "mapp": "10213"
+  },
+  "10488": {
+    "name": "Venzar 80 WP",
+    "mapp": "9981"
+  },
+  "10494": {
+    "name": "Monceren DS ",
+    "mapp": "4160"
+  },
+  "10545": {
+    "name": "Caramba  ",
+    "mapp": "10213"
+  },
+  "10576": {
+    "name": "Scala ",
+    "mapp": "7806"
+  },
+  "10748": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "10763": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "10770": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "10893": {
+    "name": "Curzate M68 ",
+    "mapp": "8072"
+  },
+  "10956": {
+    "name": "Headland Relay P  ",
+    "mapp": "8580"
+  },
+  "11042": {
+    "name": "Radspor FL  ",
+    "mapp": "1685"
+  },
+  "11052": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "11087": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "11336": {
+    "name": "Amistar  ",
+    "mapp": "8517"
+  },
+  "11337": {
+    "name": "Landmark ",
+    "mapp": "8889"
+  },
+  "11338": {
+    "name": "Unix  ",
+    "mapp": "8764"
+  },
+  "11339": {
+    "name": "Terpal C ",
+    "mapp": "7062"
+  },
+  "11340": {
+    "name": "Eagle ",
+    "mapp": "7318"
+  },
+  "11343": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "11347": {
+    "name": "Dithianon Flowable",
+    "mapp": "7007"
+  },
+  "11348": {
+    "name": "Shirlan  ",
+    "mapp": "7091"
+  },
+  "11351": {
+    "name": "Radspor FL  ",
+    "mapp": "1685"
+  },
+  "11352": {
+    "name": "Mirage 40 EC",
+    "mapp": "6770"
+  },
+  "11494": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "11511": {
+    "name": "Opera ",
+    "mapp": "12167"
+  },
+  "11536": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "11560": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "11588": {
+    "name": "Opus  ",
+    "mapp": "8319"
+  },
+  "11648": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "11652": {
+    "name": "Flexidor 125",
+    "mapp": "5104"
+  },
+  "11719": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "11776": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "11787": {
+    "name": "Mavrik",
+    "mapp": "10612"
+  },
+  "11805": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "11906": {
+    "name": "Turfclear",
+    "mapp": "7506"
+  },
+  "11912": {
+    "name": "Asulox",
+    "mapp": "9969"
+  },
+  "11919": {
+    "name": "Venzar Flowable",
+    "mapp": "6907"
+  },
+  "11953": {
+    "name": "Merlin",
+    "mapp": "7943"
+  },
+  "11969": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "11989": {
+    "name": "Filex ",
+    "mapp": "7631"
+  },
+  "11990": {
+    "name": "Alpha Bromotril PT",
+    "mapp": "9435"
+  },
+  "11992": {
+    "name": "Merlin",
+    "mapp": "7943"
+  },
+  "12012": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "12033": {
+    "name": "Tern  ",
+    "mapp": "8660"
+  },
+  "12048": {
+    "name": "Butisan S",
+    "mapp": "11733"
+  },
+  "12110": {
+    "name": "Eagle ",
+    "mapp": "7318"
+  },
+  "12114": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "12117": {
+    "name": "Opus  ",
+    "mapp": "8319"
+  },
+  "12118": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "12119": {
+    "name": "Shirlan  ",
+    "mapp": "7091"
+  },
+  "12127": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "12128": {
+    "name": "Amistar  ",
+    "mapp": "8517"
+  },
+  "12133": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "12165": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "12170": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "12185": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "12202": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "12219": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "12224": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "12243": {
+    "name": "Asulox",
+    "mapp": "9969"
+  },
+  "12245": {
+    "name": "Asulox",
+    "mapp": "9969"
+  },
+  "12252": {
+    "name": "Landmark ",
+    "mapp": "11730"
+  },
+  "12261": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "12262": {
+    "name": "Novall",
+    "mapp": "12031"
+  },
+  "12268": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "12269": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "12275": {
+    "name": "Stroby WG",
+    "mapp": "8653"
+  },
+  "12278": {
+    "name": "Mantra",
+    "mapp": "11728"
+  },
+  "12279": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "12294": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "12319": {
+    "name": "Titus ",
+    "mapp": "11895"
+  },
+  "12343": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "12360": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "12363": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "12382": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "12422": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "12427": {
+    "name": "Titus ",
+    "mapp": "11895"
+  },
+  "12454": {
+    "name": "Sultan 50 SC",
+    "mapp": "10418"
+  },
+  "12456": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "12468": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "12509": {
+    "name": "Rapsan 500 SC  ",
+    "mapp": "12088"
+  },
+  "12512": {
+    "name": "Shogun",
+    "mapp": "10584"
+  },
+  "12523": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "12524": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "12525": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "12543": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "12548": {
+    "name": "Agil  ",
+    "mapp": "11048"
+  },
+  "12559": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "12572": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "12587": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "12604": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "12610": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "12630": {
+    "name": "Goltix WG",
+    "mapp": "11539"
+  },
+  "12688": {
+    "name": "Takron",
+    "mapp": "11627"
+  },
+  "12737": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "12739": {
+    "name": "Reglone  ",
+    "mapp": "10534"
+  },
+  "12741": {
+    "name": "Devrinol ",
+    "mapp": "9374"
+  },
+  "12842": {
+    "name": "Proplant ",
+    "mapp": "8572"
+  },
+  "12854": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "12859": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "12861": {
+    "name": "Ronstar Liquid ",
+    "mapp": "11215"
+  },
+  "12863": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  },
+  "12867": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "12886": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "12888": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "12889": {
+    "name": "Ronstar Liquid ",
+    "mapp": "11215"
+  },
+  "12890": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "12894": {
+    "name": "Scorpio  ",
+    "mapp": "12293"
+  },
+  "12910": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "12911": {
+    "name": "Fandango ",
+    "mapp": "12276"
+  },
+  "12938": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "12939": {
+    "name": "Asulox",
+    "mapp": "9969"
+  },
+  "12942": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "12961": {
+    "name": "Dovetail ",
+    "mapp": "12550"
+  },
+  "12967": {
+    "name": "Sumi-Alpha  ",
+    "mapp": "10401"
+  },
+  "12988": {
+    "name": "Scorpio  ",
+    "mapp": "12293"
+  },
+  "12995": {
+    "name": "Reglone  ",
+    "mapp": "10534"
+  },
+  "13001": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "13005": {
+    "name": "Aurora",
+    "mapp": "11613"
+  },
+  "13006": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "13018": {
+    "name": "Pan Tees ",
+    "mapp": "12894"
+  },
+  "13021": {
+    "name": "Fury 10 EW  ",
+    "mapp": "12248"
+  },
+  "13025": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "13036": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "13052": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "13079": {
+    "name": "Barclay Gallup 360",
+    "mapp": "12659"
+  },
+  "13121": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "13129": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "13137": {
+    "name": "Bonzi ",
+    "mapp": "6640"
+  },
+  "13138": {
+    "name": "Asulox",
+    "mapp": "9969"
+  },
+  "13163": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "13165": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "13177": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "13183": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "13188": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "13199": {
+    "name": "Pathfinder Excel  ",
+    "mapp": "12501"
+  },
+  "13201": {
+    "name": "Sumi-Alpha  ",
+    "mapp": "10401"
+  },
+  "13219": {
+    "name": "Equity",
+    "mapp": "12465"
+  },
+  "13222": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "13246": {
+    "name": "Dovetail ",
+    "mapp": "12550"
+  },
+  "13266": {
+    "name": "Oblix 500",
+    "mapp": "12349"
+  },
+  "13298": {
+    "name": "Equity",
+    "mapp": "12465"
+  },
+  "13302": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "13308": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "13309": {
+    "name": "Ronstar Liquid ",
+    "mapp": "11215"
+  },
+  "13325": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "13329": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "13336": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "13339": {
+    "name": "Radspor FL  ",
+    "mapp": "1685"
+  },
+  "13371": {
+    "name": "Cyren ",
+    "mapp": "11028"
+  },
+  "13379": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13384": {
+    "name": "Aliette 80 WG  ",
+    "mapp": "13130"
+  },
+  "13394": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13415": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13421": {
+    "name": "Ally SX  ",
+    "mapp": "12059"
+  },
+  "13422": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "13424": {
+    "name": "Cultar",
+    "mapp": "10523"
+  },
+  "13425": {
+    "name": "Topas ",
+    "mapp": "9717"
+  },
+  "13426": {
+    "name": "Opus Team",
+    "mapp": "11759"
+  },
+  "13430": {
+    "name": "Alpha Ethofumesate 50SC ",
+    "mapp": "13055"
+  },
+  "13435": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "13444": {
+    "name": "Caramba  ",
+    "mapp": "10213"
+  },
+  "13453": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "13464": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "13466": {
+    "name": "Ally SX  ",
+    "mapp": "12059"
+  },
+  "13483": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "13531": {
+    "name": "Fandango ",
+    "mapp": "12276"
+  },
+  "13546": {
+    "name": "Biscaya  ",
+    "mapp": "12471"
+  },
+  "13567": {
+    "name": "Defy  ",
+    "mapp": "12606"
+  },
+  "13571": {
+    "name": "Aliette 80 WG  ",
+    "mapp": "13130"
+  },
+  "13574": {
+    "name": "Scala ",
+    "mapp": "11695"
+  },
+  "13576": {
+    "name": "Calaris  ",
+    "mapp": "12405"
+  },
+  "13577": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "13598": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "13608": {
+    "name": "Fury 10 EW  ",
+    "mapp": "12248"
+  },
+  "13615": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "13616": {
+    "name": "Bumper Excell  ",
+    "mapp": "11015"
+  },
+  "13624": {
+    "name": "Spotlight Plus ",
+    "mapp": "12436"
+  },
+  "13625": {
+    "name": "Aliette 80 WG  ",
+    "mapp": "13130"
+  },
+  "13633": {
+    "name": "Ally SX  ",
+    "mapp": "12059"
+  },
+  "13634": {
+    "name": "Amistar Pro ",
+    "mapp": "10513"
+  },
+  "13635": {
+    "name": "Defy  ",
+    "mapp": "12606"
+  },
+  "13636": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "13638": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "13639": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "13640": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "13641": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "13642": {
+    "name": "Venture  ",
+    "mapp": "12316"
+  },
+  "13643": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "13644": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "13645": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "13646": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "13647": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "13648": {
+    "name": "Metazachlore GL 500  ",
+    "mapp": "12528"
+  },
+  "13650": {
+    "name": "Epok  ",
+    "mapp": "11997"
+  },
+  "13651": {
+    "name": "Topas ",
+    "mapp": "9717"
+  },
+  "13653": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "13654": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "13655": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "13657": {
+    "name": "Finy  ",
+    "mapp": "12855"
+  },
+  "13659": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "13661": {
+    "name": "Clinic",
+    "mapp": "12678"
+  },
+  "13662": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "13664": {
+    "name": "Troy 480 ",
+    "mapp": "12341"
+  },
+  "13665": {
+    "name": "Teldor",
+    "mapp": "11229"
+  },
+  "13666": {
+    "name": "Ranman Twinpack",
+    "mapp": "11851"
+  },
+  "13667": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13668": {
+    "name": "Boxer ",
+    "mapp": "9819"
+  },
+  "13682": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13693": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "13694": {
+    "name": "Shortcut ",
+    "mapp": "13320"
+  },
+  "13706": {
+    "name": "Calypso  ",
+    "mapp": "11257"
+  },
+  "13719": {
+    "name": "Metazachlore GL 500  ",
+    "mapp": "12528"
+  },
+  "13721": {
+    "name": "Diamant  ",
+    "mapp": "11557"
+  },
+  "13723": {
+    "name": "Equity",
+    "mapp": "12465"
+  },
+  "13730": {
+    "name": "Minuet EW",
+    "mapp": "12304"
+  },
+  "13731": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "13733": {
+    "name": "Teldor",
+    "mapp": "11229"
+  },
+  "13737": {
+    "name": "Basamid  ",
+    "mapp": "12895"
+  },
+  "13762": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "13768": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "13769": {
+    "name": "Orka  ",
+    "mapp": "8879"
+  },
+  "13770": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "13777": {
+    "name": "Teppeki  ",
+    "mapp": "12402"
+  },
+  "13779": {
+    "name": "Titus ",
+    "mapp": "11895"
+  },
+  "13783": {
+    "name": "Vydate 10G  ",
+    "mapp": "2322"
+  },
+  "13787": {
+    "name": "Barclay Gallup 360",
+    "mapp": "12659"
+  },
+  "13795": {
+    "name": "Prosaro  ",
+    "mapp": "12263"
+  },
+  "13796": {
+    "name": "Invader  ",
+    "mapp": "11978"
+  },
+  "13803": {
+    "name": "Medax Top",
+    "mapp": "13282"
+  },
+  "13807": {
+    "name": "Stroby WG",
+    "mapp": "8653"
+  },
+  "13808": {
+    "name": "Dynamec  ",
+    "mapp": "13331"
+  },
+  "13810": {
+    "name": "Calaris  ",
+    "mapp": "12405"
+  },
+  "13823": {
+    "name": "Titus ",
+    "mapp": "11895"
+  },
+  "13824": {
+    "name": "Ranman Twinpack",
+    "mapp": "11851"
+  },
+  "13828": {
+    "name": "Cadou Star  ",
+    "mapp": "13242"
+  },
+  "13830": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "13831": {
+    "name": "Alpha Fluazinam 50SC ",
+    "mapp": "13622"
+  },
+  "13833": {
+    "name": "Heritage ",
+    "mapp": "13536"
+  },
+  "13838": {
+    "name": "Insignia ",
+    "mapp": "11865"
+  },
+  "13844": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  },
+  "13851": {
+    "name": "Dithianon WG",
+    "mapp": "12538"
+  },
+  "13856": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "13878": {
+    "name": "Tracker  ",
+    "mapp": "12295"
+  },
+  "13879": {
+    "name": "Prosaro  ",
+    "mapp": "12263"
+  },
+  "13880": {
+    "name": "Avail XT ",
+    "mapp": "13194"
+  },
+  "13888": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "13889": {
+    "name": "Glister  ",
+    "mapp": "12990"
+  },
+  "13898": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "13899": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "13901": {
+    "name": "Teldor",
+    "mapp": "11229"
+  },
+  "13903": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "13906": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "13908": {
+    "name": "Pastor",
+    "mapp": "11168"
+  },
+  "13920": {
+    "name": "Novall",
+    "mapp": "12031"
+  },
+  "13922": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "13931": {
+    "name": "Ally SX  ",
+    "mapp": "12059"
+  },
+  "13934": {
+    "name": "Diamant  ",
+    "mapp": "13253"
+  },
+  "13940": {
+    "name": "Glister  ",
+    "mapp": "12990"
+  },
+  "13942": {
+    "name": "Diquanet ",
+    "mapp": "13413"
+  },
+  "13943": {
+    "name": "Boyano",
+    "mapp": "13849"
+  },
+  "13950": {
+    "name": "Heritage ",
+    "mapp": "13536"
+  },
+  "13951": {
+    "name": "Tordon 22K  ",
+    "mapp": "5083"
+  },
+  "13953": {
+    "name": "Dynamec  ",
+    "mapp": "13331"
+  },
+  "13956": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "13957": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "13972": {
+    "name": "Devrinol ",
+    "mapp": "9374"
+  },
+  "13976": {
+    "name": "Harvest  ",
+    "mapp": "7321"
+  },
+  "13977": {
+    "name": "Clinic",
+    "mapp": "12678"
+  },
+  "13978": {
+    "name": "Agil  ",
+    "mapp": "11048"
+  },
+  "13981": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "13986": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "13987": {
+    "name": "Reglone  ",
+    "mapp": "10534"
+  },
+  "13995": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "13996": {
+    "name": "Actellic 50EC  ",
+    "mapp": "12726"
+  },
+  "13997": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "14002": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "14006": {
+    "name": "Clinic",
+    "mapp": "12678"
+  },
+  "14010": {
+    "name": "Solace",
+    "mapp": "11936"
+  },
+  "14019": {
+    "name": "Plover",
+    "mapp": "11763"
+  },
+  "14022": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "14025": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "14026": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "14028": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "14033": {
+    "name": "Fox",
+    "mapp": "11981"
+  },
+  "14041": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "14049": {
+    "name": "Solace",
+    "mapp": "11936"
+  },
+  "14052": {
+    "name": "Tordon 22K  ",
+    "mapp": "5083"
+  },
+  "14055": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "14062": {
+    "name": "Cortez",
+    "mapp": "13932"
+  },
+  "14065": {
+    "name": "Pan Aquarius",
+    "mapp": "13018"
+  },
+  "14071": {
+    "name": "Fastac",
+    "mapp": "13604"
+  },
+  "14072": {
+    "name": "SL 567A  ",
+    "mapp": "12380"
+  },
+  "14078": {
+    "name": "Ranman Twinpack",
+    "mapp": "11851"
+  },
+  "14079": {
+    "name": "Cadou Star  ",
+    "mapp": "13242"
+  },
+  "14083": {
+    "name": "Alpha Pendimethalin 330 EC ",
+    "mapp": "13815"
+  },
+  "14084": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "14105": {
+    "name": "Cyperkill 10",
+    "mapp": "13157"
+  },
+  "14107": {
+    "name": "Barclay Gallup 360",
+    "mapp": "12659"
+  },
+  "14109": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "14113": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "14115": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "14120": {
+    "name": "Belcocel ",
+    "mapp": "11881"
+  },
+  "14121": {
+    "name": "Doxstar  ",
+    "mapp": "11063"
+  },
+  "14125": {
+    "name": "BASF 3C Chlormequat 720 ",
+    "mapp": "6514"
+  },
+  "14130": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "14135": {
+    "name": "Actellic 50EC  ",
+    "mapp": "12726"
+  },
+  "14140": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "14144": {
+    "name": "Stabilan 750",
+    "mapp": "9303"
+  },
+  "14159": {
+    "name": "Calaris  ",
+    "mapp": "12405"
+  },
+  "14160": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "14163": {
+    "name": "Timbrel  ",
+    "mapp": "5815"
+  },
+  "14173": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "14175": {
+    "name": "Fastac",
+    "mapp": "13604"
+  },
+  "14176": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "14180": {
+    "name": "BASF 3C Chlormequat 750 ",
+    "mapp": "6878"
+  },
+  "14194": {
+    "name": "Cyperkill 10",
+    "mapp": "13157"
+  },
+  "14197": {
+    "name": "Caramba 90  ",
+    "mapp": "12655"
+  },
+  "14201": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "14210": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "14212": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "14216": {
+    "name": "Typhoon 360 ",
+    "mapp": "12932"
+  },
+  "14236": {
+    "name": "Runner",
+    "mapp": "12940"
+  },
+  "14251": {
+    "name": "Agriguard Chlormequat 720  ",
+    "mapp": "9919"
+  },
+  "14269": {
+    "name": "Clinic Ace  ",
+    "mapp": "12980"
+  },
+  "14271": {
+    "name": "Mirage 40 EC",
+    "mapp": "6770"
+  },
+  "14272": {
+    "name": "Warbler  ",
+    "mapp": "13389"
+  },
+  "14289": {
+    "name": "Landgold Cyper 100",
+    "mapp": "14105"
+  },
+  "14291": {
+    "name": "Cortez",
+    "mapp": "13932"
+  },
+  "14292": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "14293": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "14294": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "14295": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "14296": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "14297": {
+    "name": "Clinic",
+    "mapp": "12678"
+  },
+  "14300": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "14303": {
+    "name": "Fox",
+    "mapp": "11981"
+  },
+  "14305": {
+    "name": "Tracker  ",
+    "mapp": "12295"
+  },
+  "14307": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14315": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "14320": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14323": {
+    "name": "Powertwin",
+    "mapp": "14004"
+  },
+  "14329": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14331": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "14342": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "14348": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14359": {
+    "name": "Alpha Linuron 50 SC  ",
+    "mapp": "14215"
+  },
+  "14371": {
+    "name": "Betasana SC ",
+    "mapp": "14209"
+  },
+  "14374": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "14379": {
+    "name": "Provado Lawn Grub Killer",
+    "mapp": "12875"
+  },
+  "14386": {
+    "name": "Greenor  ",
+    "mapp": "10909"
+  },
+  "14392": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "14393": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "14404": {
+    "name": "Indar 5EW",
+    "mapp": "9518"
+  },
+  "14409": {
+    "name": "Eagle ",
+    "mapp": "7318"
+  },
+  "14410": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "14411": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "14413": {
+    "name": "Alpha Metazachlor 50SC  ",
+    "mapp": "10669"
+  },
+  "14414": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "14415": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "14416": {
+    "name": "Moddus",
+    "mapp": "8801"
+  },
+  "14417": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "14421": {
+    "name": "Starane 2",
+    "mapp": "12018"
+  },
+  "14422": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "14423": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "14430": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14436": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "14442": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "14443": {
+    "name": "Samson Extra 6%",
+    "mapp": "13436"
+  },
+  "14451": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14452": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "14456": {
+    "name": "Provado Lawn Grub Killer",
+    "mapp": "12875"
+  },
+  "14466": {
+    "name": "Samson Extra 6%",
+    "mapp": "13436"
+  },
+  "14467": {
+    "name": "Caramba  ",
+    "mapp": "10213"
+  },
+  "14468": {
+    "name": "Holster XL  ",
+    "mapp": "13596"
+  },
+  "14470": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "14486": {
+    "name": "Jubilee SX  ",
+    "mapp": "12203"
+  },
+  "14487": {
+    "name": "Jewel ",
+    "mapp": "14327"
+  },
+  "14489": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "14492": {
+    "name": "Butisan S",
+    "mapp": "11733"
+  },
+  "14493": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14494": {
+    "name": "Kerb 50W ",
+    "mapp": "13715"
+  },
+  "14495": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14501": {
+    "name": "Calaris  ",
+    "mapp": "12405"
+  },
+  "14504": {
+    "name": "Chikara Weed Control ",
+    "mapp": "14189"
+  },
+  "14505": {
+    "name": "Clinic Ace  ",
+    "mapp": "12980"
+  },
+  "14506": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "14507": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "14508": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  },
+  "14519": {
+    "name": "Diquanet ",
+    "mapp": "13413"
+  },
+  "14522": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14523": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "14533": {
+    "name": "Reglone  ",
+    "mapp": "10534"
+  },
+  "14535": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "14536": {
+    "name": "Sencorex WG ",
+    "mapp": "11304"
+  },
+  "14538": {
+    "name": "Throttle ",
+    "mapp": "13900"
+  },
+  "14539": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "14543": {
+    "name": "Floramite 240 SC  ",
+    "mapp": "13686"
+  },
+  "14555": {
+    "name": "Alpha Chlorpyrifos 48EC ",
+    "mapp": "13532"
+  },
+  "14559": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14568": {
+    "name": "Barclay Barbarian ",
+    "mapp": "12714"
+  },
+  "14584": {
+    "name": "Novall",
+    "mapp": "12031"
+  },
+  "14586": {
+    "name": "Afalon",
+    "mapp": "14187"
+  },
+  "14599": {
+    "name": "Sempra",
+    "mapp": "13525"
+  },
+  "14600": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "14602": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14603": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14607": {
+    "name": "Betasana SC ",
+    "mapp": "14209"
+  },
+  "14614": {
+    "name": "Swift SC ",
+    "mapp": "11227"
+  },
+  "14616": {
+    "name": "Bumper 250 EC  ",
+    "mapp": "14399"
+  },
+  "14617": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14620": {
+    "name": "Fox",
+    "mapp": "11981"
+  },
+  "14642": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14656": {
+    "name": "Afalon",
+    "mapp": "14187"
+  },
+  "14657": {
+    "name": "Mirage 40 EC",
+    "mapp": "6770"
+  },
+  "14675": {
+    "name": "Chikara Weed Control ",
+    "mapp": "14189"
+  },
+  "14676": {
+    "name": "Latitude ",
+    "mapp": "10695"
+  },
+  "14677": {
+    "name": "Cerone",
+    "mapp": "9985"
+  },
+  "14680": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14681": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "14684": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14685": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14691": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "14693": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14695": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14706": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14707": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "14710": {
+    "name": "Afalon",
+    "mapp": "14187"
+  },
+  "14715": {
+    "name": "Stomp 400 SC",
+    "mapp": "13405"
+  },
+  "14739": {
+    "name": "Alpha Linuron 50 SC  ",
+    "mapp": "14215"
+  },
+  "14754": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "14761": {
+    "name": "Bumper 250 EC  ",
+    "mapp": "14399"
+  },
+  "14765": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  },
+  "14771": {
+    "name": "Harmony M SX",
+    "mapp": "12258"
+  },
+  "14773": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "14778": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "14779": {
+    "name": "Midas ",
+    "mapp": "13285"
+  },
+  "14781": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14786": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "14789": {
+    "name": "Odin  ",
+    "mapp": "13468"
+  },
+  "14791": {
+    "name": "Venzar Flowable",
+    "mapp": "6907"
+  },
+  "14794": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "14798": {
+    "name": "Orius 20 EW ",
+    "mapp": "12311"
+  },
+  "14802": {
+    "name": "Primo Maxx  ",
+    "mapp": "13374"
+  },
+  "14803": {
+    "name": "Heritage ",
+    "mapp": "13536"
+  },
+  "14805": {
+    "name": "Teppeki  ",
+    "mapp": "12402"
+  },
+  "14812": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "14816": {
+    "name": "Ranman Twinpack",
+    "mapp": "11851"
+  },
+  "14819": {
+    "name": "Primo Maxx  ",
+    "mapp": "13374"
+  },
+  "14824": {
+    "name": "Odin  ",
+    "mapp": "13468"
+  },
+  "14827": {
+    "name": "Falcon",
+    "mapp": "14552"
+  },
+  "14828": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "14830": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "14832": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "14834": {
+    "name": "Barclay Gallup 360",
+    "mapp": "12659"
+  },
+  "14838": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "14839": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "14851": {
+    "name": "Chipco Green",
+    "mapp": "13843"
+  },
+  "14856": {
+    "name": "Titus ",
+    "mapp": "11895"
+  },
+  "14858": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "14860": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "14871": {
+    "name": "Cortez",
+    "mapp": "13932"
+  },
+  "14872": {
+    "name": "Rescue",
+    "mapp": "14518"
+  },
+  "14876": {
+    "name": "Doff Knockdown Weedkiller Spray  ",
+    "mapp": "12560"
+  },
+  "14881": {
+    "name": "Devrinol ",
+    "mapp": "9374"
+  },
+  "14885": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "14888": {
+    "name": "Cabadex  ",
+    "mapp": "13948"
+  },
+  "14889": {
+    "name": "Priori Xtra ",
+    "mapp": "11518"
+  },
+  "14890": {
+    "name": "Flexity  ",
+    "mapp": "11775"
+  },
+  "14891": {
+    "name": "3C Chlormequat 720",
+    "mapp": "13973"
+  },
+  "14895": {
+    "name": "Barclay Gallup Biograde Amenity  ",
+    "mapp": "12716"
+  },
+  "14896": {
+    "name": "Throttle ",
+    "mapp": "13900"
+  },
+  "14897": {
+    "name": "Throttle ",
+    "mapp": "13900"
+  },
+  "14898": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14904": {
+    "name": "Helix ",
+    "mapp": "12264"
+  },
+  "14905": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "14922": {
+    "name": "Betanal Expert ",
+    "mapp": "14034"
+  },
+  "14924": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "14925": {
+    "name": "Taipan",
+    "mapp": "14155"
+  },
+  "14926": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "14928": {
+    "name": "Crystal  ",
+    "mapp": "13914"
+  },
+  "14932": {
+    "name": "K-Obiol EC25",
+    "mapp": "13573"
+  },
+  "14934": {
+    "name": "Cyperkill 10",
+    "mapp": "13157"
+  },
+  "14935": {
+    "name": "Plover",
+    "mapp": "11763"
+  },
+  "14936": {
+    "name": "Roundup Pro-Green ",
+    "mapp": "11907"
+  },
+  "14937": {
+    "name": "Dual Gold",
+    "mapp": "14649"
+  },
+  "14938": {
+    "name": "Gamit 36 CS ",
+    "mapp": "13861"
+  },
+  "14941": {
+    "name": "Dalda 5  ",
+    "mapp": "13688"
+  },
+  "14942": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "14945": {
+    "name": "Proline  ",
+    "mapp": "12084"
+  },
+  "14946": {
+    "name": "Stabilan 750",
+    "mapp": "9303"
+  },
+  "14947": {
+    "name": "Defy  ",
+    "mapp": "12606"
+  },
+  "14949": {
+    "name": "Falcon",
+    "mapp": "14552"
+  },
+  "14951": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "14952": {
+    "name": "Primo Maxx  ",
+    "mapp": "13374"
+  },
+  "14954": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "14956": {
+    "name": "Phantom  ",
+    "mapp": "11954"
+  },
+  "14958": {
+    "name": "CleanCrop Hoedown ",
+    "mapp": "12913"
+  },
+  "14961": {
+    "name": "Hatra ",
+    "mapp": "14524"
+  },
+  "14963": {
+    "name": "Dithianon WG",
+    "mapp": "12538"
+  },
+  "14965": {
+    "name": "Difcor 250 EC  ",
+    "mapp": "13917"
+  },
+  "14968": {
+    "name": "GIBB Plus",
+    "mapp": "11875"
+  },
+  "14976": {
+    "name": "Scala ",
+    "mapp": "11695"
+  },
+  "14979": {
+    "name": "Dithianon Flowable",
+    "mapp": "10219"
+  },
+  "14981": {
+    "name": "Manfil 75 WG",
+    "mapp": "14768"
+  },
+  "14982": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "14995": {
+    "name": "Sumi-Alpha  ",
+    "mapp": "14023"
+  },
+  "14996": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "15000": {
+    "name": "Riza  ",
+    "mapp": "12696"
+  },
+  "15003": {
+    "name": "Actara",
+    "mapp": "13728"
+  },
+  "15004": {
+    "name": "Difcor 250 EC  ",
+    "mapp": "13917"
+  },
+  "15005": {
+    "name": "Equity",
+    "mapp": "12465"
+  },
+  "15006": {
+    "name": "Topik ",
+    "mapp": "12333"
+  },
+  "15007": {
+    "name": "Quantum SX  ",
+    "mapp": "12239"
+  },
+  "15010": {
+    "name": "Celmitron 70% WDG ",
+    "mapp": "14408"
+  },
+  "15018": {
+    "name": "Eagle ",
+    "mapp": "7318"
+  },
+  "15020": {
+    "name": "Padawan  ",
+    "mapp": "14853"
+  },
+  "15021": {
+    "name": "Valbon",
+    "mapp": "14868"
+  },
+  "15022": {
+    "name": "Menace 80EDF",
+    "mapp": "13714"
+  },
+  "15023": {
+    "name": "Infinito ",
+    "mapp": "12644"
+  },
+  "15024": {
+    "name": "Merlin",
+    "mapp": "7943"
+  },
+  "15030": {
+    "name": "Actellic 50EC  ",
+    "mapp": "12726"
+  },
+  "15031": {
+    "name": "Cruiser OSR ",
+    "mapp": "14496"
+  },
+  "15033": {
+    "name": "Besiege  ",
+    "mapp": "8086"
+  },
+  "15039": {
+    "name": "Sultan 50 SC",
+    "mapp": "10418"
+  },
+  "15041": {
+    "name": "Markate 50  ",
+    "mapp": "13529"
+  },
+  "15042": {
+    "name": "Reglone  ",
+    "mapp": "10534"
+  },
+  "15045": {
+    "name": "Nando 500SC ",
+    "mapp": "14372"
+  },
+  "15047": {
+    "name": "Tanos ",
+    "mapp": "10677"
+  },
+  "15048": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "15054": {
+    "name": "Sumi-Alpha  ",
+    "mapp": "14023"
+  },
+  "15055": {
+    "name": "Sumi-Alpha  ",
+    "mapp": "14023"
+  },
+  "15056": {
+    "name": "Finy  ",
+    "mapp": "12855"
+  },
+  "15058": {
+    "name": "Riza  ",
+    "mapp": "12696"
+  },
+  "15063": {
+    "name": "Headland Relay P  ",
+    "mapp": "8580"
+  },
+  "15067": {
+    "name": "Timbrel  ",
+    "mapp": "5815"
+  },
+  "15072": {
+    "name": "Dual Gold",
+    "mapp": "14649"
+  },
+  "15085": {
+    "name": "Firebird ",
+    "mapp": "14826"
+  },
+  "15093": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "15098": {
+    "name": "Liberator",
+    "mapp": "12032"
+  },
+  "15115": {
+    "name": "Harvest  ",
+    "mapp": "7321"
+  },
+  "15132": {
+    "name": "Harvest  ",
+    "mapp": "7321"
+  },
+  "15133": {
+    "name": "Timbrel  ",
+    "mapp": "5815"
+  },
+  "15135": {
+    "name": "Chikara Weed Control ",
+    "mapp": "14189"
+  },
+  "15136": {
+    "name": "Heritage ",
+    "mapp": "13536"
+  },
+  "15137": {
+    "name": "Rescue",
+    "mapp": "14518"
+  },
+  "15138": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "15139": {
+    "name": "Chikara Weed Control ",
+    "mapp": "14189"
+  },
+  "15140": {
+    "name": "Proline  ",
+    "mapp": "12084"
+  },
+  "15155": {
+    "name": "Borneo",
+    "mapp": "13919"
+  },
+  "15157": {
+    "name": "Chikara Weed Control ",
+    "mapp": "14189"
+  },
+  "15164": {
+    "name": "Monitor  ",
+    "mapp": "12236"
+  },
+  "15165": {
+    "name": "Crescent ",
+    "mapp": "13330"
+  },
+  "15166": {
+    "name": "Aliette 80 WG  ",
+    "mapp": "13130"
+  },
+  "15173": {
+    "name": "Mextrol-Biox",
+    "mapp": "14697"
+  },
+  "15202": {
+    "name": "Topsin WG",
+    "mapp": "13988"
+  },
+  "15221": {
+    "name": "Katamaran",
+    "mapp": "11732"
+  },
+  "15236": {
+    "name": "Starane XL  ",
+    "mapp": "10921"
+  },
+  "15253": {
+    "name": "K-Obiol ULV6",
+    "mapp": "13572"
+  },
+  "15255": {
+    "name": "Bumper 250 EC  ",
+    "mapp": "14399"
+  },
+  "15256": {
+    "name": "Ethosat 500 ",
+    "mapp": "13050"
+  },
+  "15257": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "15258": {
+    "name": "Moddus",
+    "mapp": "15151"
+  },
+  "15262": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "15264": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "15266": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "15267": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "15269": {
+    "name": "Troy 480 ",
+    "mapp": "12341"
+  },
+  "15271": {
+    "name": "Ranman Twinpack",
+    "mapp": "11851"
+  },
+  "15272": {
+    "name": "Titus ",
+    "mapp": "15050"
+  },
+  "15273": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "15274": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "15275": {
+    "name": "Venture  ",
+    "mapp": "12316"
+  },
+  "15276": {
+    "name": "Dithianon WG",
+    "mapp": "12538"
+  },
+  "15277": {
+    "name": "Finy  ",
+    "mapp": "12855"
+  },
+  "15278": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "15280": {
+    "name": "Glister  ",
+    "mapp": "12990"
+  },
+  "15281": {
+    "name": "Titus ",
+    "mapp": "15050"
+  },
+  "15282": {
+    "name": "Teldor",
+    "mapp": "11229"
+  },
+  "15283": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "15284": {
+    "name": "Clinic",
+    "mapp": "12678"
+  },
+  "15285": {
+    "name": "Boxer ",
+    "mapp": "9819"
+  },
+  "15286": {
+    "name": "Defy  ",
+    "mapp": "12606"
+  },
+  "15288": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "15289": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "15290": {
+    "name": "Epok  ",
+    "mapp": "11997"
+  },
+  "15291": {
+    "name": "Amistar Pro ",
+    "mapp": "10513"
+  },
+  "15292": {
+    "name": "Intruder ",
+    "mapp": "15076"
+  },
+  "15293": {
+    "name": "Kerb 50W ",
+    "mapp": "13715"
+  },
+  "15295": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "15296": {
+    "name": "Teppeki  ",
+    "mapp": "12402"
+  },
+  "15297": {
+    "name": "Tordon 22K  ",
+    "mapp": "5083"
+  },
+  "15298": {
+    "name": "Samson",
+    "mapp": "12141"
+  },
+  "15299": {
+    "name": "Diamant  ",
+    "mapp": "11557"
+  },
+  "15300": {
+    "name": "Terpal",
+    "mapp": "2103"
+  },
+  "15301": {
+    "name": "Folicur  ",
+    "mapp": "11278"
+  },
+  "15302": {
+    "name": "Calaris  ",
+    "mapp": "12405"
+  },
+  "15303": {
+    "name": "Aramo ",
+    "mapp": "10280"
+  },
+  "15304": {
+    "name": "Gamit 36 CS ",
+    "mapp": "13861"
+  },
+  "15305": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "15306": {
+    "name": "Metazachlore GL 500  ",
+    "mapp": "12528"
+  },
+  "15307": {
+    "name": "Nomix Garlon 4 ",
+    "mapp": "13868"
+  },
+  "15308": {
+    "name": "Fury 10 EW  ",
+    "mapp": "12248"
+  },
+  "15309": {
+    "name": "Cadou Star  ",
+    "mapp": "13242"
+  },
+  "15310": {
+    "name": "Topas ",
+    "mapp": "9717"
+  },
+  "15314": {
+    "name": "PDM 330 EC  ",
+    "mapp": "13406"
+  },
+  "15315": {
+    "name": "Aphox ",
+    "mapp": "10515"
+  },
+  "15316": {
+    "name": "Falcon",
+    "mapp": "10585"
+  },
+  "15317": {
+    "name": "Atlantis WG ",
+    "mapp": "12478"
+  },
+  "15322": {
+    "name": "Moddus",
+    "mapp": "15151"
+  },
+  "15329": {
+    "name": "Harvest  ",
+    "mapp": "7321"
+  },
+  "15331": {
+    "name": "Titus ",
+    "mapp": "15050"
+  },
+  "15332": {
+    "name": "Aliette 80 WG  ",
+    "mapp": "13130"
+  },
+  "15333": {
+    "name": "Gusto 3  ",
+    "mapp": "14308"
+  },
+  "15334": {
+    "name": "Nautile DG  ",
+    "mapp": "14692"
+  },
+  "15335": {
+    "name": "Fazor ",
+    "mapp": "13617"
+  },
+  "15336": {
+    "name": "Ortiva",
+    "mapp": "10542"
+  },
+  "15349": {
+    "name": "Monceren DS ",
+    "mapp": "11292"
+  },
+  "15352": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "15354": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "15370": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "15374": {
+    "name": "Actellic 50EC  ",
+    "mapp": "12726"
+  },
+  "15376": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "15377": {
+    "name": "Moddus",
+    "mapp": "15151"
+  },
+  "15378": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "15379": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "15380": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "15386": {
+    "name": "Firebird ",
+    "mapp": "14826"
+  },
+  "15387": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "15388": {
+    "name": "Corbel",
+    "mapp": "578"
+  },
+  "15400": {
+    "name": "Bettix Flo  ",
+    "mapp": "11959"
+  },
+  "15405": {
+    "name": "Shark ",
+    "mapp": "12762"
+  },
+  "15407": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "15410": {
+    "name": "Centium 360 CS ",
+    "mapp": "13846"
+  },
+  "15411": {
+    "name": "Nando 500SC ",
+    "mapp": "14372"
+  },
+  "15412": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "15413": {
+    "name": "SL 567A  ",
+    "mapp": "12380"
+  },
+  "15420": {
+    "name": "Agrimec  ",
+    "mapp": "14491"
+  },
+  "15429": {
+    "name": "Prosaro  ",
+    "mapp": "12263"
+  },
+  "15430": {
+    "name": "Bravo 500",
+    "mapp": "14548"
+  },
+  "15432": {
+    "name": "Drum  ",
+    "mapp": "13853"
+  },
+  "15434": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "15437": {
+    "name": "Helix ",
+    "mapp": "12264"
+  },
+  "15448": {
+    "name": "Tandus",
+    "mapp": "13432"
+  },
+  "15449": {
+    "name": "Kerb Flo ",
+    "mapp": "13716"
+  },
+  "15450": {
+    "name": "Opus  ",
+    "mapp": "12057"
+  },
+  "15451": {
+    "name": "Merit Turf  ",
+    "mapp": "12415"
+  },
+  "15452": {
+    "name": "Hallmark with Zeon Technology ",
+    "mapp": "12629"
+  },
+  "15453": {
+    "name": "Cinder",
+    "mapp": "14526"
+  },
+  "15454": {
+    "name": "Barclay Gallup Biograde 360",
+    "mapp": "15188"
+  },
+  "15467": {
+    "name": "Merit Turf  ",
+    "mapp": "12415"
+  },
+  "15468": {
+    "name": "Amistar  ",
+    "mapp": "10443"
+  },
+  "15469": {
+    "name": "Throttle ",
+    "mapp": "13900"
+  },
+  "15471": {
+    "name": "Headway  ",
+    "mapp": "14396"
+  },
+  "15486": {
+    "name": "Bettix Flo  ",
+    "mapp": "11959"
+  },
+  "15498": {
+    "name": "Rovral AquaFlo ",
+    "mapp": "14206"
+  },
+  "15499": {
+    "name": "Alpha Diflufenican 500 SC  ",
+    "mapp": "13182"
+  },
+  "15500": {
+    "name": "Odin  ",
+    "mapp": "13468"
+  },
+  "15504": {
+    "name": "Besiege  ",
+    "mapp": "8086"
+  },
+  "15506": {
+    "name": "Cerone",
+    "mapp": "15087"
+  },
+  "15511": {
+    "name": "Titus ",
+    "mapp": "15050"
+  },
+  "15513": {
+    "name": "Alpha Pendimethalin 330 EC ",
+    "mapp": "13815"
+  },
+  "15515": {
+    "name": "Goltix Flowable",
+    "mapp": "12851"
+  },
+  "15516": {
+    "name": "Clayton Sparta ",
+    "mapp": "13457"
+  },
+  "15517": {
+    "name": "Bumper 250 EC  ",
+    "mapp": "14399"
+  },
+  "15519": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  },
+  "15520": {
+    "name": "Shirlan  ",
+    "mapp": "10573"
+  },
+  "15526": {
+    "name": "Hurricane SC",
+    "mapp": "12424"
+  },
+  "15527": {
+    "name": "Belcocel ",
+    "mapp": "11881"
+  },
+  "15530": {
+    "name": "Banner Maxx ",
+    "mapp": "13167"
+  },
+  "15531": {
+    "name": "Decis ",
+    "mapp": "7172"
+  },
+  "15532": {
+    "name": "Butisan S",
+    "mapp": "11733"
+  },
+  "15533": {
+    "name": "Galera",
+    "mapp": "11961"
+  },
+  "15535": {
+    "name": "Agrimec  ",
+    "mapp": "14491"
+  },
+  "15543": {
+    "name": "Basagran ",
+    "mapp": "188"
+  },
+  "15546": {
+    "name": "UPL B Zone  ",
+    "mapp": "14808"
+  },
+  "15585": {
+    "name": "Dessicash 200  ",
+    "mapp": "14848"
+  },
+  "15598": {
+    "name": "Banner Maxx ",
+    "mapp": "13167"
+  },
+  "15600": {
+    "name": "Dedicate ",
+    "mapp": "13612"
+  },
+  "15608": {
+    "name": "Belcocel ",
+    "mapp": "11881"
+  },
+  "15611": {
+    "name": "Jubilee SX  ",
+    "mapp": "12203"
+  },
+  "15630": {
+    "name": "Axial ",
+    "mapp": "12521"
+  },
+  "15640": {
+    "name": "Dimilin Flo ",
+    "mapp": "8769"
+  },
+  "15647": {
+    "name": "Fastac",
+    "mapp": "13604"
+  },
+  "15648": {
+    "name": "Topik ",
+    "mapp": "15123"
+  },
+  "15652": {
+    "name": "Roundup  ",
+    "mapp": "12645"
+  },
+  "15654": {
+    "name": "Rubric",
+    "mapp": "14118"
+  },
+  "15655": {
+    "name": "Betasana SC ",
+    "mapp": "14209"
+  },
+  "15659": {
+    "name": "Savvy ",
+    "mapp": "14266"
+  },
+  "15660": {
+    "name": "Moddus",
+    "mapp": "15151"
+  },
+  "15665": {
+    "name": "Nimrod",
+    "mapp": "13046"
+  },
+  "15668": {
+    "name": "Belcocel ",
+    "mapp": "11881"
+  },
+  "15669": {
+    "name": "Ally SX  ",
+    "mapp": "12059"
+  },
+  "15670": {
+    "name": "Powertwin",
+    "mapp": "14004"
+  },
+  "15673": {
+    "name": "Flurox 200  ",
+    "mapp": "13938"
+  },
+  "15678": {
+    "name": "Tordon 22K  ",
+    "mapp": "5083"
+  },
+  "15679": {
+    "name": "Fusilade Max",
+    "mapp": "11519"
+  },
+  "15681": {
+    "name": "Savvy ",
+    "mapp": "14266"
+  },
+  "15685": {
+    "name": "Systhane 20 EW ",
+    "mapp": "9396"
+  },
+  "15702": {
+    "name": "Callisto ",
+    "mapp": "12323"
+  }
+}
